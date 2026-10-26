@@ -1,0 +1,19 @@
+﻿原文段落数: 117, 改写段落数: 117
+缺失: []
+多余: []
+
+总字数: 原文25489 -> 改写26185 (1.027)
+
+字数比越界段(>0): 
+
+保留标记不一致段(8): 
+   ('107', '[A-Za-z][A-Za-z0-9_\\.]{2,}', ['Computer', 'Java', 'Library', 'Open', 'OpenCV', 'OpenCV', 'OpenCV', 'OpenCV', 'OpenCV', 'OpenCV', 'OpenCV', 'OpenCV3', 'Python', 'Python', 'Python', 'SIMD', 'Source', 'Vision'], ['Computer', 'Java', 'Library', 'Open', 'OpenCV', 'OpenCV', 'OpenCV', 'OpenCV', 'OpenCV', 'OpenCV', 'OpenCV3', 'Python', 'Python', 'Python', 'SIMD', 'Source', 'Vision'])
+   ('115', '[A-Za-z][A-Za-z0-9_\\.]{2,}', ['Matplotlib', 'Matplotlib', 'Python'], ['Matplotlib', 'Python'])
+   ('122', '[A-Za-z][A-Za-z0-9_\\.]{2,}', ['DeepLabV3', 'ImageNet', 'MobileNetV2'], ['DeepLabV3', 'DeepLabV3', 'ImageNet', 'MobileNetV2', 'MobileNetV2'])
+   ('198', '[A-Za-z][A-Za-z0-9_\\.]{2,}', ['CLAHE', 'CLAHE'], ['CLAHE'])
+   ('203', '[A-Za-z][A-Za-z0-9_\\.]{2,}', ['CLAHE', 'CLAHE', 'clipLimit', 'clipLimit', 'tileGridSize'], ['CLAHE', 'clipLimit', 'clipLimit', 'tileGridSize'])
+   ('214', '[A-Za-z][A-Za-z0-9_\\.]{2,}', ['Prewitt', 'Prewitt', 'Sobel', 'Sobel'], ['Prewitt', 'Sobel'])
+   ('228', '[A-Za-z][A-Za-z0-9_\\.]{2,}', ['Otsu', 'Otsu', 'Otsu'], ['Otsu', 'Otsu'])
+   ('242', '[A-Za-z][A-Za-z0-9_\\.]{2,}', ['CIFAR', 'CIFAR', 'CIFAR', 'CIFAR10Net', 'CIFAR10Net'], ['CIFAR', 'CIFAR', 'CIFAR', 'CIFAR10Net'])
+
+红线词命中(0): 

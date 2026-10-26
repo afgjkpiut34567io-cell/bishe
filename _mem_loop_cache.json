@@ -1,0 +1,60 @@
+{
+  "mode": "cache",
+  "iters": 120,
+  "base_rss_mb": 221.1,
+  "curve": [
+    {
+      "iter": 10,
+      "rss_mb": 243.0
+    },
+    {
+      "iter": 20,
+      "rss_mb": 254.7
+    },
+    {
+      "iter": 30,
+      "rss_mb": 264.6
+    },
+    {
+      "iter": 40,
+      "rss_mb": 275.7
+    },
+    {
+      "iter": 50,
+      "rss_mb": 283.9
+    },
+    {
+      "iter": 60,
+      "rss_mb": 293.1
+    },
+    {
+      "iter": 70,
+      "rss_mb": 300.8
+    },
+    {
+      "iter": 80,
+      "rss_mb": 308.6
+    },
+    {
+      "iter": 90,
+      "rss_mb": 317.4
+    },
+    {
+      "iter": 100,
+      "rss_mb": 327.0
+    },
+    {
+      "iter": 110,
+      "rss_mb": 334.2
+    },
+    {
+      "iter": 120,
+      "rss_mb": 342.0
+    }
+  ],
+  "peak_rss_mb": 366.3,
+  "final_rss_mb": 342.0,
+  "growth_mb": 120.9,
+  "cache_entries": 87,
+  "cache_bytes_mb": 108.7
+}

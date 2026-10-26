@@ -1,0 +1,31 @@
+﻿total paras: 416
+=== IDX 48 len 4
+摘  要
+
+=== IDX 49 len 0
+
+
+=== IDX 50 len 148
+图像处理是计算机视觉与人工智能的基础技术，在医疗影像、工业检测、安防监控、自动驾驶等领域应用广泛。但传统图像处理课程多依托数学公式与静态图片讲解，算法原理抽象，处理过程无法直观展示，初学者理解难度大，学习效果不佳。如何把抽象算法转为可交互可视化形式，降低学习门槛，是图像处理教学中亟待解决的问题。
+
+=== IDX 51 len 336
+为此，本文设计实现一套基于OpenCV与Streamlit的图像处理算法交互式演示系统。系统采用Python开发，依托OpenCV实现图像处理算法，使用Streamlit搭建Web交互界面，Matplotlib完成可视化。平台集成滤波、图像增强、边缘检测、形态学操作、阈值分割、图像变换等七大类共34种常用算法，支持滑块、下拉框等组件实时调整参数并预览效果。针对重点算法提供中间过程可视化、直方图对比、频域分析等教学视图，配套算法原理、核心代码、参数说明与应用场景介绍。系统采用四层模块化架构，借助图像缩放、结果缓存等机制提升响应性能。测试显示，算法平均处理耗时约3ms，满足低于300ms的实时性指标，各模块运行稳定，可有效辅助图像处理课程教学与自主学习，具备实用价值。
+
+=== IDX 52 len 21
+该论文有图13幅，表12个，参考文献37篇
+
+=== IDX 58 len 8
+Abstract
+
+=== IDX 59 len 0
+
+
+=== IDX 60 len 668
+Image processing is a fundamental technology in computer vision and artificial intelligence, widely applied in medical imaging, industrial inspection, security monitoring, autonomous driving, and other fields. However, traditional image processing courses often rely on mathematical formulas and static image explanations, abstract algorithmic principles, and cannot intuitively demonstrate the processing process, making it difficult for beginners to understand and resulting in poor learning outcomes. How to transform abstract algorithms into interactive visual forms and lower the learning threshold is an urgent issue to be addressed in image processing teaching.
+
+=== IDX 61 len 1277
+To address this, this paper designs and implements an interactive demonstration system for image processing algorithms based on OpenCV and Streamlit. The system is developed using Python, relying on OpenCV to implement image processing algorithms, building a web interface with Streamlit, and completing visualization using Matplotlib. The platform integrates three common algorithms: filtering, image enhancement, edge detection, morphology operations, threshold segmentation, and image transformation, supporting real-time parameter adjustment and preview effects of components such as sliders and dropdown frames. For key algorithms, it provides intermediate process visualization, histogram comparison, frequency domain analysis, and other teaching views, along with algorithm principles, core code, parameter explanations, and application scenario introductions. The system adopts a four-layer modular architecture, enhancing response performance through mechanisms such as image scaling and result caching. Tests show that the algorithm takes about 3ms to process in average time, meeting real-time performance indicators below 300ms. Each module runs stably, effectively supporting image processing course teaching and self-directed learning, making it highly practical.
+
+=== IDX 62 len 60
+This paper contains 13 figures, 12 tables, and 37 references
+

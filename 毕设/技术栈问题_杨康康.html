@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<meta name="description" content="毕业设计论文审查意见：技术栈问题 · 杨康康（20 条口径矛盾）">
+<title>技术栈问题 · 杨康康 · 论文审查意见</title>
+<style>
+:root{
+  --font-head:"Source Han Serif SC","Noto Serif SC","Songti SC",STZhongsong,SimSun,serif;
+  --font-body:-apple-system,"PingFang SC","Microsoft YaHei","Segoe UI",system-ui,sans-serif;
+  --font-mono:"Cascadia Mono",Consolas,"Sarasa Mono SC","Courier New",monospace;
+  --text-xs:12.5px; --text-sm:13.5px; --text-base:16px; --text-lg:17.5px;
+  --text-xl:21px; --text-2xl:26px; --text-3xl:31px;
+  --space-1:4px; --space-2:8px; --space-3:12px; --space-4:16px;
+  --space-5:24px; --space-6:32px; --space-7:48px; --space-8:64px;
+  --radius-sm:4px; --radius-md:8px; --radius-lg:12px; --radius-full:9999px;
+  --shadow-sm:0 1px 2px rgba(31,35,40,.06);
+  --shadow-md:0 4px 12px rgba(31,35,40,.08);
+  --shadow-lg:0 12px 32px rgba(31,35,40,.10);
+  --measure:72ch; --toc-w:250px;
+}
+:root,[data-theme="light"]{
+  --c-bg:#FBFAF7; --c-surface:#FFFFFF; --c-surface-2:#F5F3ED;
+  --c-text:#1F2328; --c-text-2:#595E66; --c-text-3:#8A9099;
+  --c-border:#E4E1D8; --c-border-2:#D2CEC2;
+  --c-accent:#A8352A; --c-accent-soft:#F5E6E2; --c-on-accent:#FFFFFF;
+  --c-link:#1F5C8B; --c-ok:#0F7B52; --c-warn:#8A5A00; --c-danger:#A8352A;
+  --c-code-bg:#F1EEE6; --c-code-text:#8A3324;
+  --c-mark:#F7E9B0; --c-shadow:rgba(31,35,40,.08); --c-on-solid:#FFFFFF;
+}
+[data-theme="dark"]{
+  --c-bg:#1C1E22; --c-surface:#24272C; --c-surface-2:#2C3036;
+  --c-text:#E8E6E1; --c-text-2:#B3B8BD; --c-text-3:#8B9198;
+  --c-border:#3A3F45; --c-border-2:#4A5058;
+  --c-accent:#E0857A; --c-accent-soft:#3A2A28; --c-on-accent:#1C1E22;
+  --c-link:#7FB6E3; --c-ok:#5CC49A; --c-warn:#E0B26A; --c-danger:#E0857A;
+  --c-code-bg:#2C3036; --c-code-text:#F0C4B8;
+  --c-mark:#4A4124; --c-shadow:rgba(0,0,0,.4); --c-on-solid:#15171B;
+}
+[data-theme="high-contrast"]{
+  --c-bg:#000000; --c-surface:#000000; --c-surface-2:#121212;
+  --c-text:#FFFFFF; --c-text-2:#FFFFFF; --c-text-3:#F2F2F2;
+  --c-border:#FFFFFF; --c-border-2:#FFFFFF;
+  --c-accent:#FFE500; --c-accent-soft:#1A1A00; --c-on-accent:#000000;
+  --c-link:#66D9FF; --c-ok:#5CE65C; --c-warn:#FFE500; --c-danger:#FF8A80;
+  --c-code-bg:#1A1A1A; --c-code-text:#FFFFFF;
+  --c-mark:#3D3D00; --c-shadow:rgba(255,255,255,.25); --c-on-solid:#000000;
+}
+
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+body{margin:0;background:var(--c-bg);color:var(--c-text);
+  font-family:var(--font-body);font-size:var(--text-base);line-height:1.8;
+  -webkit-font-smoothing:antialiased;letter-spacing:.01em}
+h1,h2,h3,h4{font-family:var(--font-head);line-height:1.35;margin:0;font-weight:700;letter-spacing:.01em}
+h1{font-size:clamp(var(--text-2xl),1rem+2.4vw,var(--text-3xl))}
+h2{font-size:var(--text-xl);margin:var(--space-7) 0 var(--space-4);
+  padding-bottom:var(--space-2);border-bottom:2px solid var(--c-border)}
+h3{font-size:var(--text-lg);margin:var(--space-6) 0 var(--space-3)}
+h4{font-size:var(--text-base);margin:var(--space-5) 0 var(--space-2);color:var(--c-text-2)}
+p{margin:var(--space-3) 0}
+a{color:var(--c-link);text-decoration:underline;text-underline-offset:2px}
+[data-theme="light"] a{text-decoration:none}
+a:hover{text-decoration:underline}
+:focus-visible{outline:3px solid var(--c-accent);outline-offset:2px;border-radius:var(--radius-sm)}
+code{font-family:var(--font-mono);font-size:.88em;background:var(--c-code-bg);
+  color:var(--c-code-text);padding:1px 6px;border-radius:var(--radius-sm);word-break:break-word}
+ul,ol{margin:var(--space-3) 0;padding-left:1.6em}
+li{margin:var(--space-1) 0}
+hr{border:0;border-top:1px solid var(--c-border);margin:var(--space-6) 0}
+strong{font-weight:700;color:var(--c-text)}
+em{font-style:normal;background:var(--c-mark);padding:0 3px;border-radius:2px}
+blockquote{margin:var(--space-4) 0;padding:var(--space-3) var(--space-5);
+  border-left:3px solid var(--c-accent);background:var(--c-surface);color:var(--c-text-2)}
+.skip{position:absolute;left:var(--space-3);top:-60px;background:var(--c-surface);
+  color:var(--c-text);padding:var(--space-2) var(--space-4);border:1px solid var(--c-border);
+  border-radius:var(--radius-md);z-index:60;transition:top .15s}
+.skip:focus{top:var(--space-3)}
+
+.progress{position:fixed;inset:0 0 auto 0;height:3px;background:transparent;z-index:50}
+.progress i{display:block;height:100%;width:0;background:var(--c-accent);transition:width .1s linear}
+.masthead{max-width:1240px;margin:0 auto;padding:var(--space-7) var(--space-6) var(--space-5)}
+.brand{font-family:var(--font-body);font-size:var(--text-xs);letter-spacing:.22em;
+  text-transform:uppercase;color:var(--c-accent);margin-bottom:var(--space-3)}
+.masthead h1{max-width:34ch}
+.subline{color:var(--c-text-2);font-size:var(--text-sm);margin-top:var(--space-3);
+  display:flex;flex-wrap:wrap;gap:var(--space-2) var(--space-4)}
+.chips{display:flex;flex-wrap:wrap;gap:var(--space-2);margin-top:var(--space-4)}
+.chip{font-size:var(--text-xs);line-height:1.6;padding:3px 11px;border-radius:var(--radius-full);
+  border:1px solid var(--c-border-2);background:var(--c-surface);color:var(--c-text-2);white-space:nowrap}
+.chip-verdict{border-color:transparent;font-weight:700}
+.v-fix{background:var(--c-danger);color:var(--c-on-solid)}
+.v-minor{background:var(--c-ok);color:var(--c-on-solid)}
+.v-hold{background:var(--c-warn);color:var(--c-on-solid)}
+.v-unknown{background:var(--c-surface-2);color:var(--c-text-2)}
+.themectl{display:flex;gap:var(--space-1);margin-top:var(--space-4)}
+.themectl button{font:inherit;font-size:var(--text-xs);padding:5px 13px;cursor:pointer;
+  border:1px solid var(--c-border-2);background:var(--c-surface);color:var(--c-text-2);
+  border-radius:var(--radius-full);transition:.15s}
+.themectl button:hover{border-color:var(--c-accent);color:var(--c-accent)}
+.themectl button[aria-pressed="true"]{background:var(--c-text);color:var(--c-bg);border-color:var(--c-text)}
+.layout{max-width:1240px;margin:0 auto;padding:0 var(--space-6) var(--space-8);
+  display:grid;grid-template-columns:var(--toc-w) minmax(0,1fr);gap:var(--space-7)}
+.layout.no-toc{grid-template-columns:minmax(0,1fr)}
+.doc{min-width:0;background:var(--c-surface);border:1px solid var(--c-border);
+  border-radius:var(--radius-lg);box-shadow:var(--shadow-sm);
+  padding:var(--space-6) clamp(var(--space-4),3vw,var(--space-7));scroll-margin-top:var(--space-5)}
+@media (max-width:1023px){
+  .layout{grid-template-columns:minmax(0,1fr);gap:var(--space-4)}
+  .masthead{padding:var(--space-6) var(--space-4) var(--space-4)}
+  .doc{padding:var(--space-5) var(--space-4)}
+}
+
+.toc{position:sticky;top:var(--space-5);align-self:start;max-height:calc(100vh - var(--space-8));
+  overflow:auto;padding-right:var(--space-2);font-size:var(--text-sm)}
+.toc h2{font-family:var(--font-body);font-size:var(--text-xs);letter-spacing:.16em;
+  color:var(--c-text-3);text-transform:uppercase;margin:0 0 var(--space-3);
+  padding:0 0 var(--space-2);border:0;border-bottom:1px solid var(--c-border)}
+.toc ol{list-style:none;margin:0;padding:0}
+.toc li{margin:0}
+.toc a{display:block;padding:5px var(--space-3);border-left:2px solid var(--c-border);
+  color:var(--c-text-2);text-decoration:none;line-height:1.5;border-radius:0 var(--radius-sm) var(--radius-sm) 0}
+.toc a:hover{color:var(--c-accent);background:var(--c-surface-2)}
+.toc a.lv3{padding-left:var(--space-6);font-size:var(--text-xs)}
+.toc a.current{border-left-color:var(--c-accent);color:var(--c-accent);font-weight:600;background:var(--c-accent-soft)}
+@media (max-width:1023px){
+  .toc{position:static;max-height:none;order:2;
+    border:1px solid var(--c-border);border-radius:var(--radius-md);background:var(--c-surface);padding:var(--space-4)}
+  .toc[open]{padding-bottom:var(--space-2)}
+  .toc summary{cursor:pointer;font-weight:700;color:var(--c-accent)}
+}
+
+.table-wrap{overflow-x:auto;margin:var(--space-5) 0;border:1px solid var(--c-border);
+  border-radius:var(--radius-md);background:var(--c-surface)}
+table{border-collapse:collapse;width:100%;font-size:var(--text-sm);line-height:1.7;margin:0}
+th,td{padding:10px 14px;text-align:left;vertical-align:top;border-bottom:1px solid var(--c-border)}
+thead th{position:sticky;top:0;background:var(--c-surface-2);font-weight:700;color:var(--c-text);
+  white-space:nowrap;border-bottom:2px solid var(--c-border-2);z-index:1}
+tbody tr:last-child td{border-bottom:0}
+tbody tr:nth-child(even){background:var(--c-surface-2)}
+tbody tr:hover{background:var(--c-accent-soft)}
+td code{font-size:.85em}
+/* 指标表首列（项目名）与末列（判定）不被超长实测列挤碎 */
+td:first-child,th:first-child{min-width:8em;word-break:keep-all}
+td:nth-child(2),th:nth-child(2){min-width:8.5em}
+td:last-child,th:last-child{min-width:6.5em}
+
+.task{display:flex;gap:var(--space-3);align-items:flex-start;margin:var(--space-2) 0;
+  padding:var(--space-3) var(--space-4);background:var(--c-surface-2);
+  border-radius:var(--radius-md);border-left:3px solid var(--c-border-2)}
+.task input[type=checkbox]{width:16px;height:16px;margin:6px 0 0;flex:none;accent-color:var(--c-accent);cursor:default}
+.task span.body{flex:1;min-width:0}
+.task-block{border-left-color:var(--c-danger);background:var(--c-accent-soft)}
+.task-major{border-left-color:var(--c-warn)}
+.task-minor{border-left-color:var(--c-border-2)}
+.sev{display:inline-block;font-size:var(--text-xs);font-weight:700;padding:1px 9px;
+  border-radius:var(--radius-full);margin-right:var(--space-2);vertical-align:2px}
+.sev-block{background:var(--c-danger);color:var(--c-on-solid)}
+.sev-major{background:var(--c-warn);color:var(--c-on-solid)}
+.sev-minor{background:var(--c-text-2);color:var(--c-bg)}
+.doc-footer{max-width:1240px;margin:0 auto;padding:0 var(--space-6) var(--space-8);
+  color:var(--c-text-3);font-size:var(--text-xs);display:flex;justify-content:space-between;gap:var(--space-4);flex-wrap:wrap}
+.totop{position:fixed;right:var(--space-5);bottom:var(--space-5);padding:8px 13px;cursor:pointer;
+  border:1px solid var(--c-border-2);background:var(--c-surface);color:var(--c-text-2);
+  border-radius:var(--radius-full);font:inherit;font-size:var(--text-xs);box-shadow:var(--shadow-md);opacity:0;pointer-events:none;transition:.2s}
+.totop.show{opacity:1;pointer-events:auto}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.progress i{transition:none}}
+@media print{
+  :root,[data-theme]{--c-bg:#fff;--c-surface:#fff;--c-text:#000;--c-text-2:#333;
+    --c-border:#bbb;--c-border-2:#888;--c-accent:#A8352A;--c-danger:#A8352A;--c-warn:#8A5A00;
+    --c-on-solid:#FFFFFF;--c-surface-2:#f2f2f2;--c-code-bg:#eee;--c-mark:#ffd}
+  .progress,.themectl,.toc,.totop,.skip{display:none!important}
+  .layout{display:block;padding:0;max-width:none}
+  .masthead{padding:0 0 12px;border-bottom:2px solid #000}
+  .doc{border:0;box-shadow:none;padding:0}
+  body{font-size:10.5pt;line-height:1.6}
+  h2{page-break-after:avoid} table,figure{page-break-inside:avoid}
+  thead th{position:static} .table-wrap{overflow:visible;border:1px solid #888}
+  a{color:#000;text-decoration:none}
+}
+</style>
+</head>
+<body>
+<div class="progress" aria-hidden="true"><i id="pbar"></i></div>
+<a class="skip" href="#doc">跳到正文</a>
+<header class="masthead">
+<div class="brand">毕业设计论文审查意见</div>
+<h1>技术栈问题 · 杨康康</h1>
+<div class="chips"><span class="chip chip-verdict v-fix">20 条口径矛盾</span><span class="chip">7230267148</span></div>
+<div class="themectl" role="group" aria-label="主题切换"><button type="button" data-t="light" aria-pressed="false">浅色</button><button type="button" data-t="dark" aria-pressed="false">深色</button><button type="button" data-t="high-contrast" aria-pressed="false">高对比</button><button type="button" data-t="auto" aria-pressed="false">跟随系统</button></div>
+</header>
+<div class="layout no-toc">
+
+<main id="doc" class="doc">
+<p><strong>课题</strong>：基于opencv和streamlit的图像处理算法交互式演示系统<br><strong>技术栈</strong>：Python 3.10 + OpenCV-Python + Streamlit + Matplotlib + NumPy + Pillow（深度学习模块另用 PyTorch / torchvision：MobileNetV2、DeepLabV3、SRCNN、自定义 CIFAR10Net）<br><strong>审查日期</strong>：2026-10-12</p>
+<h2 id="h1">问题清单</h2>
+<div class="table-wrap"><table><thead><tr><th scope="col">编号</th><th scope="col">问题</th><th scope="col">定位</th><th scope="col">整改意见</th></tr></thead><tbody><tr><td>1</td><td>深度学习四类算法的效果评价全部停留在目视层面：分类只叠加Top-3柱状图、分割只输出彩色掩膜融合、超分与CIFAR分类的功能测试实际结果栏统一写"与预期一致"，全章没有Top-1/Top-5准确率、mIoU、PSNR/SSIM等客观指标，无法与第3章"验证有效性"对应</td><td>行 613「将类别索引映射为彩色掩膜并与原始图像进行加权融合」对照 行 711「针对四类深度学习算法，系统同样进行了功能测试」；表6-2（行 713–732）实际结果均为"与预期一致"</td><td>在 6.2 补图像分类Top-1/Top-5、语义分割mIoU、超分辨率PSNR/SSIM的实测数值与测试集名称、样本数，或删去深度学习"效果得到验证"的定性表述</td></tr><tr><td>2</td><td>经典算法的效果同样只有目视对比：测试方法称对合成区域计算边缘定位误差与检出率、与OpenCV同名函数做逐像素偏差，第6章却未给出任何指标数值，功能测试实际结果一律"通过"，效果证据只有图5-2、图5-3截图</td><td>行 661「第三阶段在多分辨率下测量算法本体耗时」对照 行 733「计算边缘定位误差与检出率」；行 710「均能正确处理图像并输出预期结果」</td><td>补逐像素偏差、边缘定位误差、检出率的数值表，或把 6.2 与 6.4 改为以目视与形状一致性为准并删去"计算定位误差与检出率"的量化承诺</td></tr><tr><td>3</td><td>300ms实时性指标的口径前后错位：3.3 界定300ms为端到端感知延迟（含界面重绘），实现与测试实际只测量算法本体耗时（process_image 的计时只包住 algo_func 调用），而论文自己指出响应主要来自 Streamlit 重跑开销，该开销从未被测量</td><td>行 362「端到端的感知延迟，即从用户完成参数调整到界面完成结果重绘的整体耗时」对照 行 661「第三阶段在多分辨率下测量算法本体耗时」；行 766「系统的响应延迟主要来源于Streamlit脚本重新执行的框架开销」，计时实现见 行 646 process_image 仅包裹算法调用、结论见 行 778</td><td>6.3 补从参数变更到界面刷新的端到端耗时实测，或把 3.3 指标改述为仅约束算法核心耗时并同步摘要与 6.4 结论口径</td></tr><tr><td>4</td><td>摘要 headline 耗时无法由第6章复算：表6-3 的12项算术平均约3.7ms、中位数约1.8ms，均对不上"约3ms"；6.3 又称测试了34种算法平均耗时，而表6-3 只列12项、其余22项无任何数值</td><td>行 54「算法平均处理耗时约3ms，满足低于300ms的实时性指标」对照 行 736「分别测试了系统的34种算法在不同分辨率图像下的平均处理耗时」；表6-3 数值见 行 742–765（12项）</td><td>补全34种算法的耗时数据或把 6.3 改为"12种代表算法"，摘要"约3ms"标注为表6-3 均值并给出中位数与样本数，使口径可复算</td></tr><tr><td>5</td><td>关键对比结论缺对照组与消融：SRCNN 相对双三次插值"更锐利"、滤波类"达到预期信噪比改善"、34种算法的响应，全部只给默认参数单次运行的通过判定，既无未处理对照，也无 PSNR/SSIM 数值与参数扫描消融</td><td>行 614「相比传统的双三次插值方法，SRCNN能够重建出更加锐利的边缘与纹理细节」对照 行 733「滤波类在对应噪声模型下达到预期信噪比改善」</td><td>6.3 或 6.4 补双三次插值与 SRCNN 的 PSNR/SSIM 对照、加噪前后信噪比数值，并对代表性算法给出关键参数的取值-效果消融曲线</td></tr><tr><td>6</td><td>预训练权重的来源与首次加载代价缺落地依据：论文称模型权重由 torchvision 提供并首次加载后常驻内存，未写权重包名与下载源、文件大小、是否随仓库内置或联网拉取、首次加载耗时，无网络环境如何处理也没有说明，性能与稳定性测试均不含首次加载</td><td>行 611「系统通过Streamlit的缓存机制使模型在首次加载后常驻内存」对照 行 343「大规模数据集上预训练好的权重参数」</td><td>表5-1 或 5.10 补 MobileNetV2、DeepLabV3 权重来源、文件名、大小与首次加载耗时实测，写明断网或离线部署时的加载处理方式</td></tr><tr><td>7</td><td>Web 部署表述与实际单用户模式相互张力：可行性分析称以Web应用形式经浏览器访问、系统定位为课堂演示与学生自学工具，实现说明却确认单用户本地运行、未做并发，Streamlit 单进程重跑模型下多人同时调节会相互阻塞，需求与测试均无并发用户数约束</td><td>行 364「系统以Web应用形式运行，用户通过浏览器即可访问」对照 行 794「系统目前为单用户本地运行模式，尚未实现多用户并发访问和数据持久化存储」</td><td>3.1 或 3.4 补并发规模与部署边界（如单用户演示或局域网 N 用户），第6章补并发实测；无法支持多人则把"浏览器即可访问"限定为演示场景</td></tr><tr><td>8</td><td>内存占用只有定性"无泄漏"而无数值：稳定性测试称以内存占用曲线评估稳定性、运行两小时未出现内存泄漏，但四个模型常驻且无 GPU 加速，全文未给出任一内存峰值或增长数据</td><td>行 661「以连续处理的内存占用曲线评估稳定性」对照 行 772「期间系统未出现崩溃、内存泄漏或明显卡顿现象」</td><td>6.3 补连续处理过程中的内存峰值与增长曲线数值（MB），给出常驻模型的驻留内存与释放策略</td></tr><tr><td>9</td><td>torchvision 自带能力与自研算法的边界未划清：分类、分割直接调用 torchvision 预训练模型的归一化与前向、argmax 结果，论文统称"基于PyTorch实现了四类深度学习图像处理算法"，未说明其中哪些是复用预训练结构、哪些是自研训练网络</td><td>行 611「实现了四类深度学习图像处理算法」对照 行 612「然后送入网络前向传播得到各类别的得分」</td><td>5.10 把四类分述为"复用 torchvision 预训练结构（MobileNetV2 分类、DeepLabV3 分割）"与"自研训练（SRCNN、CIFAR10Net）"，避免统称自研实现</td></tr><tr><td>10</td><td>算法数量口径断裂：需求章"六个模块展开，共实现30余种"，其余各章"七大类共34种"。表4-1 六类相加 5+6+5+7+3+4=30，"30余种"（&gt;30）与实际 30 不符</td><td>行 356「本系统围绕滤波、图像增强、边缘检测、形态学操作、阈值分割与图像变换六个模块展开」对照 行 54「平台集成滤波、图像增强、边缘检测、形态学操作、阈值分割、图像变换等七大类」；同口径 行 308「构建了一个覆盖七大类34种算法」、行 311「基于OpenCV与PyTorch实现共34种算法的处理功能」、行 375「算法层依托OpenCV实现七大类共34种图像处理方法」、行 384「系统将34种算法划分为七个类别」、行 655「系统以OpenCV为核心实现了七大类34种算法的处理功能」、行 710「34种算法均能正确处理图像并输出预期结果」、行 733「算法正确性测试覆盖七大类共34种算法」、行 774「七大类34种算法、参数交互、步骤可视化」；计数见 行 390–407「高斯滤波、中值滤波、均值滤波、双边滤波、方框滤波」</td><td>3.2 节第（2）条补列深度学习算法处理功能，"30余种"改为"六大类30种经典算法加四类深度学习共34种"</td></tr><tr><td>11</td><td>深度学习无需求、无组织出处：功能需求只列六模块（行 356），"五大类功能需求"（行 354、行 370）、用例分析（行 366）均未涉及深度学习，代码组织也只说"六个算法实现模块"（行 379，训练部分另见行 616）</td><td>行 354「本系统的功能需求可以归纳为以下五个方面」、行 356「六个模块展开，共实现30余种常用方法」、行 366「可将系统的主要使用场景归纳为以下几类典型用例」、行 370「参数交互、可视化教学和结果输出五大类功能需求」、行 379「modules目录存放算法层的六个算法实现模块及可视化模块」对照 行 409「图像分类、语义分割、超分辨率、CIFAR-10分类」、行 611「基于PyTorch实现了四类深度学习图像处理算法」、行 616「系统在modules/training模块中提供了完整的训练流水线」</td><td>3.2 节补深度学习功能需求，3.5 节补深度学习用例，4.1 代码组织改为"六个算法模块加 training 模块"</td></tr><tr><td>12</td><td>创新点"三个方面"实列四条："主要体现在以下三个方面"却另起"四是引入了深度学习算法模块"</td><td>行 792「本系统的创新点主要体现在以下三个方面」对照 行 792「四是引入了深度学习算法模块」</td><td>7.2 节"三个方面"改为"四个方面"，或把深度学习一条并入第三点，使数目与列举一致</td></tr><tr><td>13</td><td>英文摘要自相矛盾且与中文互斥："integrates three common algorithms"却列 6 类，且通篇未译"34种、七大类、深度学习"</td><td>行 64「integrates three common algorithms」对照 行 54「图像变换等七大类共34种常用算法」</td><td>行 64 的"three"改为"seven categories，34 algorithms"，深度学习四类补译</td></tr><tr><td>14</td><td>表6-3 题注缺分辨率限定：题注"部分算法平均处理耗时"，表清单作"部分算法平均处理耗时（800×600图像）"；正文行 736 已带该限定，仅题注漏</td><td>行 737「表6-3 部分算法平均处理耗时」对照 行 219「部分算法平均处理耗时（800×600图像）」；正文 行 736「列出了部分代表性算法在分辨率为800×600的测试图像上的平均处理耗时」</td><td>行 737 题注补"（800×600图像）"，与表清单行 219 题名一致</td></tr><tr><td>15</td><td>分图引用与题注不匹配：正文用 图5-4(a)/(b)、图5-5(a)/(b)，题注未分列 (a)(b) 说明</td><td>行 612–615「叠加在结果图像下方（如图5-4(a)所示）」对照 行 634「图5-4 深度学习图像理解算法处理效果」、行 636「图5-5 超分辨率重建与CIFAR-10分类效果」</td><td>图5-4、图5-5 题注分列（a）（b）小图说明，与 5.10 正文分图引用一一对应</td></tr><tr><td>16</td><td>变量表"列而不用"：变量注释表列 η（学习率）、epochs、batch_size，但深度学习实现段仅以文字说"Adam优化器""训练轮次"，未以这些符号成式</td><td>行 282「训练中控制参数更新步长的超参数」、行 286「完整遍历训练集一遍的次数」、行 290「每次参数更新所使用的样本数量」对照 行 616「采用交叉熵损失函数与Adam优化器进行训练」</td><td>变量表删去 η、epochs、batch_size 三条，或在 5.10 训练段用这三个符号写明取值</td></tr><tr><td>17</td><td>OpenCV 覆盖面过度声明：行 330"本系统所需的34种算法均有成熟且经过优化的实现"，与行 331"Prewitt算子、锐化核、伽马查找表等OpenCV未直接提供"及行 611"基于PyTorch实现了四类深度学习"直接互斥</td><td>行 330「本系统所需的34种算法均有成熟且经过优化的实现」对照 行 331「对于Prewitt算子、锐化核、伽马查找表等OpenCV未直接提供的功能」、行 611「基于PyTorch实现了四类深度学习图像处理算法」</td><td>行 330 限定为六大类30种经典算法，深度学习四类与 NumPy 自建核表另行分述</td></tr><tr><td>18</td><td>缩放发生位置两种说法：行 446"图像加载时……限制在1200像素和900像素以内"（加载即缩放）对照 行 734"超过阈值的图像仅在预览分支按最长边等比缩放，导出仍基于原图"（仅预览缩放）；行 769 又出现未在测试档位（640×480、800×600、1280×960）之内的"图像自动缩放上限1200×900的分辨率下"，需核实</td><td>行 446「对过大的图像进行自动缩放，将图像最大宽度和高度分别限制在1200像素」对照 行 734「超过阈值的图像仅在预览分支按最长边等比缩放，导出仍基于原图」；行 769「即使在图像自动缩放上限1200×900的分辨率下」对照 行 769「选取了640×480、800×600和1280×960三种分辨率的测试图像」</td><td>行 446 与行 734 统一缩放发生位置口径，补 image_io 缩放代码说明；行 769 删该档或补实测</td></tr><tr><td>19</td><td>统计量口径不统一：测试方法"重复执行并取中位数"（行 660），结果处一律称"平均处理耗时"（行 736、行 737、行 766），二者未说明关系</td><td>行 660「清除缓存后重复执行并取中位数」对照 行 736「分别测试了系统的34种算法在不同分辨率图像下的平均处理耗时」、行 737「表6-3 部分算法平均处理耗时」、行 766「绝大多数算法的平均处理耗时在1至4毫秒之间」</td><td>6.1 与 6.3 统一统计量，表6-3 题注、图6-1 与正文一律改称中位数耗时，或行 660 改为取均值</td></tr><tr><td>20</td><td>叙述与展示代码不符：行 339 称"向量化运算……无需显式编写循环，例如伽马校正中查找表的构建"，行 487 示例代码却用 Python 列表推导逐项构造 256 级表</td><td>行 339「使得对图像像素的批量操作无需显式编写循环」、行 339「例如伽马校正中查找表的构建」对照 行 487「255 for i in range(256)」</td><td>行 339 删去"伽马校正中查找表的构建"例证，或把行 487 示例代码改为 np.arange 向量化构造</td></tr></tbody></table></div>
+</main>
+</div>
+<button type="button" id="totop" class="totop" onclick="scrollTo({top:0,behavior:'smooth'})">返回顶部</button>
+<script>
+(function(){
+  var k='review-theme',root=document.documentElement;
+  function apply(t){ if(t==='auto'){ t=matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light'; }
+    root.setAttribute('data-theme',t);
+    Array.prototype.forEach.call(document.querySelectorAll('.themectl button'),function(b){
+      b.setAttribute('aria-pressed', String(b.dataset.t===t)); });
+  }
+  var saved=localStorage.getItem(k)||'auto'; apply(saved);
+  Array.prototype.forEach.call(document.querySelectorAll('.themectl button'),function(b){
+    b.addEventListener('click',function(){ localStorage.setItem(k,b.dataset.t); apply(b.dataset.t); });
+  });
+  matchMedia('(prefers-color-scheme: dark)').addEventListener('change',function(){
+    if((localStorage.getItem(k)||'auto')==='auto') apply('auto'); });
+  var bar=document.getElementById('pbar'),top=document.getElementById('totop');
+  function onScroll(){ var h=document.documentElement.scrollHeight-innerHeight;
+    bar.style.width=(h>0?scrollY/h*100:0)+'%'; top.classList.toggle('show',scrollY>600); }
+  addEventListener('scroll',onScroll,{passive:true}); onScroll();
+  var links=Array.prototype.slice.call(document.querySelectorAll('.toc a')),
+      hs=links.map(function(a){ return document.getElementById(a.getAttribute('href').slice(1)); });
+  function spy(){ var cur=0;
+    for(var j=0;j<hs.length;j++){ if(hs[j]&&hs[j].getBoundingClientRect().top<120) cur=j; }
+    links.forEach(function(a,i){ a.classList.toggle('current',i===cur); }); }
+  addEventListener('scroll',spy,{passive:true}); spy();
+})();
+</script>
+</body>
+</html>

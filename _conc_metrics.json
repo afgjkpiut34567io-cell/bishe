@@ -1,0 +1,66 @@
+{
+  "cpu": 16,
+  "server_ready": true,
+  "boot_s": 3.3,
+  "server_rounds": 3,
+  "server": [
+    {
+      "concurrency": 1,
+      "ok": 3,
+      "total": 3,
+      "avg_ms": 8.2,
+      "max_ms": 9.0
+    },
+    {
+      "concurrency": 5,
+      "ok": 15,
+      "total": 15,
+      "avg_ms": 21.8,
+      "max_ms": 37.7
+    },
+    {
+      "concurrency": 10,
+      "ok": 30,
+      "total": 30,
+      "avg_ms": 32.2,
+      "max_ms": 35.6
+    },
+    {
+      "concurrency": 20,
+      "ok": 60,
+      "total": 60,
+      "avg_ms": 60.9,
+      "max_ms": 71.1
+    }
+  ],
+  "compute": [
+    {
+      "concurrency": 1,
+      "calls": 8,
+      "avg_ms": 0.71,
+      "max_ms": 0.85,
+      "throughput": 910.4
+    },
+    {
+      "concurrency": 2,
+      "calls": 16,
+      "avg_ms": 1.5,
+      "max_ms": 3.17,
+      "throughput": 902.2
+    },
+    {
+      "concurrency": 4,
+      "calls": 32,
+      "avg_ms": 2.05,
+      "max_ms": 5.08,
+      "throughput": 1322.9
+    },
+    {
+      "concurrency": 8,
+      "calls": 64,
+      "avg_ms": 3.13,
+      "max_ms": 5.48,
+      "throughput": 1651.4
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+# 深度学习功能依赖（在现有 OpenCV/NumPy/Streamlit/Matplotlib 环境之上增量安装）
+#
+# CPU 版（推荐，体积约 200MB）：
+#   pip install torch torchvision --index-url https://download.pytorch.org/whl/cpu
+#
+# GPU 版（需已安装 NVIDIA CUDA 驱动，体积约 2GB）：
+#   pip install torch torchvision
+#
+# 说明：仅使用经典算法、不启用深度学习功能时，无需安装本文件所列依赖，
+# 平台会因 modules/registry.py 中的 try/except 自动跳过深度学习算法。
+
+torch
+torchvision

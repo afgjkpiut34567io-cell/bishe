@@ -1,0 +1,60 @@
+{
+  "mode": "nocache",
+  "iters": 120,
+  "base_rss_mb": 220.9,
+  "curve": [
+    {
+      "iter": 10,
+      "rss_mb": 231.1
+    },
+    {
+      "iter": 20,
+      "rss_mb": 231.4
+    },
+    {
+      "iter": 30,
+      "rss_mb": 231.6
+    },
+    {
+      "iter": 40,
+      "rss_mb": 231.6
+    },
+    {
+      "iter": 50,
+      "rss_mb": 231.6
+    },
+    {
+      "iter": 60,
+      "rss_mb": 231.8
+    },
+    {
+      "iter": 70,
+      "rss_mb": 232.3
+    },
+    {
+      "iter": 80,
+      "rss_mb": 232.3
+    },
+    {
+      "iter": 90,
+      "rss_mb": 232.8
+    },
+    {
+      "iter": 100,
+      "rss_mb": 232.8
+    },
+    {
+      "iter": 110,
+      "rss_mb": 232.8
+    },
+    {
+      "iter": 120,
+      "rss_mb": 232.8
+    }
+  ],
+  "peak_rss_mb": 261.1,
+  "final_rss_mb": 232.8,
+  "growth_mb": 11.9,
+  "cache_entries": 0,
+  "cache_bytes_mb": 0.0
+}

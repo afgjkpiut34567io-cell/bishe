@@ -1,0 +1,29 @@
+# ===== Python =====
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+env/
+.eggs/
+*.egg-info/
+.ipynb_checkpoints/
+
+# ===== 数据集 / 模型（体积大，不入库）=====
+.datasets/
+
+# ===== IDE / 编辑器 =====
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# ===== 系统 / Office 临时文件 =====
+~$*
+*.tmp
+*.bak
+.DS_Store
+Thumbs.db
+
+# ===== 本地环境配置 =====
+*.local
+.env

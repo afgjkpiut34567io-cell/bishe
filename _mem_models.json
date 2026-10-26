@@ -1,0 +1,40 @@
+{
+  "rss_after_import_mb": 263.1,
+  "models": [
+    {
+      "name": "MobileNetV2（图像分类）",
+      "params": 3504872,
+      "file_mb": null,
+      "rss_before_mb": 263.1,
+      "rss_after_mb": 294.5,
+      "delta_mb": 31.4
+    },
+    {
+      "name": "DeepLabV3（语义分割）",
+      "params": 11029328,
+      "file_mb": null,
+      "rss_before_mb": 294.5,
+      "rss_after_mb": 353.1,
+      "delta_mb": 58.6
+    },
+    {
+      "name": "SRCNN（超分辨率）",
+      "params": 8129,
+      "file_mb": 0.0,
+      "rss_before_mb": 353.1,
+      "rss_after_mb": 353.1,
+      "delta_mb": 0.0
+    },
+    {
+      "name": "CIFAR10Net（自定义分类）",
+      "params": 620362,
+      "file_mb": 2.4,
+      "rss_before_mb": 353.1,
+      "rss_after_mb": 353.7,
+      "delta_mb": 0.6
+    }
+  ],
+  "peak_rss_mb": 380.7,
+  "rss_final_mb": 353.7,
+  "total_delta_mb": 90.6
+}
